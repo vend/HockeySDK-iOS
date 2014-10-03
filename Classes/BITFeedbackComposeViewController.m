@@ -218,17 +218,6 @@
   
   [self.contentViewContainer addSubview:self.textView];
   
-  // Add Photo Button + Container that's displayed above the keyboard.
-  self.textAccessoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 44)];
-  self.textAccessoryView.backgroundColor = [UIColor colorWithRed:0.9f green:0.9f blue:0.9f alpha:1.0f];
-  UIButton *addPhotoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-  [addPhotoButton setTitle:BITHockeyLocalizedString(@"HockeyFeedbackComposeAttachmentAddImage") forState:UIControlStateNormal];
-  [addPhotoButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-  addPhotoButton.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 44);
-  [addPhotoButton addTarget:self action:@selector(addPhotoAction:) forControlEvents:UIControlEventTouchUpInside];
-  
-  [self.textAccessoryView addSubview:addPhotoButton];
-  
   self.textView.inputAccessoryView = self.textAccessoryView;
   
   // This could be a subclass, yet 
